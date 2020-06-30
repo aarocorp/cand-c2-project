@@ -1,0 +1,22 @@
+Group hierarchy,Region,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+My Estimate,US East (N. Virginia),Amazon RDS for MariaDB,0,3208.848,38506.18,USD,"Quantity (2), Storage volume (Provisioned IOPS SSD (io1)), Provisioning IOPS (1000), Storage amount (2000 GB per month), Instance type (db.r5.2xlarge), Additional backup storage (2000 GB)"
+My Estimate,US East (N. Virginia),Amazon EC2,0,796.64,9559.68,USD,"Operating system (Linux), Quantity (2), Storage for each EC2 instance (Throughput Optimized HDD (st1)), Storage amount (1000 GB), Instance type (m5.4xlarge)"
+My Estimate,US East (N. Virginia),Amazon EC2,0,257.9,3094.80,USD,"Operating system (Linux), Quantity (2), Storage for each EC2 instance (Throughput Optimized HDD (st1)), Storage amount (1000 GB), Instance type (t2.xlarge)"
+My Estimate,US East (N. Virginia),S3 Standard,0,127.8,1533.60,USD,S3 Standard storage (4000 GB per month)
+My Estimate,US East (N. Virginia),Amazon Virtual Private Cloud (VPC),0,482.85,5794.20,USD,Number of NAT Gateways (1)
+My Estimate,US East (N. Virginia),Amazon Elastic IP,0,0,0.00,USD,"Number of EC2 instances (2), Number of EIPs per instance (1)"
+My Estimate,US East (N. Virginia),Elastic Load Balancing,0,600.43,7205.16,USD,Number of Application Load Balancers (1)
+My Estimate,US East (N. Virginia),Elastic Load Balancing,0,892.43,10709.16,USD,"Number of Network Load Balancers (1), Processed bytes per NLB for TCP (100 GB per hour), Average number of new TCP connections (1000 per second), Average TCP connection duration (1 seconds), Processed bytes per NLB for UDP (0 GB per hour), Average number of new UDP Flows (0 per second), Average UDP Flow duration (0 seconds), Processed bytes per NLB for TLS (100 GB per hour), Average number of new TLS connections (1000 per second), Average TLS connection duration (1 seconds)"
+
+
+
+"AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
+
+Total monthly : 6,366.90 USD
+
+Changes made from Initial Cost Estimate:
+- 2 * Amazon RDS for MariaDB from onDemand to 1 Year Standard Reserved
+- 4 * Amazon EC2 (For application Server)
+---> from onDemand to 1 Year Standard Reserved
+---> EBS Type changed from General Purpose SSD to Throughput Optimized HDD
+
