@@ -45,6 +45,31 @@ module "ud_aws_vpc_2" {
   subnets_cidr_blocks = var.ud_aws_vpc_subnets_cidr_blocks
 }
 
+# EC2 creation
+module "ud_aws_ec2_1" {
+  providers = {
+    aws = aws.east_1
+  }
+  source          = "./modules/ud-aws-ec2"
+  ec2_config      = var.ud_aws_ec2_config
+  instances_ami  = var.ud_aws_ec2_instances_ami_1
+  instances_type  = var.ud_aws_ec2_instances_type
+  instances_names = var.ud_aws_ec2_instances_names
+  subnets_ids     = module.ud_aws_vpc_1.subnets_ids
+}
+
+module "ud_aws_ec2_2" {
+  providers = {
+    aws = aws.east_2
+  }
+  source          = "./modules/ud-aws-ec2"
+  ec2_config      = var.ud_aws_ec2_config
+  instances_ami  = var.ud_aws_ec2_instances_ami_2
+  instances_type  = var.ud_aws_ec2_instances_type
+  instances_names = var.ud_aws_ec2_instances_names
+  subnets_ids     = module.ud_aws_vpc_2.subnets_ids
+}
+
 # S3 Creation
 module "ud_aws_s3_1" {
   providers = {

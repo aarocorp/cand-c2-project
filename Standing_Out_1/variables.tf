@@ -45,3 +45,31 @@ variable "ud_aws_s3_region" {
   default = "us-east-1"
 }
 
+#ud-aws-ec2 variables
+variable "ud_aws_ec2_config" {
+  type = map
+  default = {
+    "volume_type" = "gp2"
+    "volume_size" = 20
+  }
+}
+
+variable "ud_aws_ec2_instances_ami_1" {
+  type = string
+  default = "ami-09d95fab7fff3776c"
+}
+
+variable "ud_aws_ec2_instances_ami_2" {
+  type = string
+  default = "ami-026dea5602e368e96"
+}
+
+variable "ud_aws_ec2_instances_type" {
+  type    = list
+  default = ["t2.micro", "t2.micro"]
+}
+
+variable "ud_aws_ec2_instances_names" {
+  type    = list
+  default = ["ec2_1", "ec2_2"]
+}

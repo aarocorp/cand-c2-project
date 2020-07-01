@@ -1,10 +1,14 @@
 variable "ec2_config" {
   type = map
   default = {
-    "ami"         = "ami-09d95fab7fff3776c"
     "volume_type" = "gp2"
     "volume_size" = 20
   }
+}
+
+variable "instances_ami" {
+  type    = string
+  default = "ami-09d95fab7fff3776c"
 }
 
 variable "instances_type" {

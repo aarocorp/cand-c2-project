@@ -1,7 +1,7 @@
 # https://www.terraform.io/docs/providers/aws/r/instance.html
 resource "aws_instance" "main_ec2s" {
   count                  = min(length(var.instances_type), length(var.subnets_ids))
-  ami                    = var.ec2_config[var.ami]
+  ami                    = var.instances_ami
   instance_type          = var.instances_type[count.index]
   subnet_id              = var.subnets_ids[count.index]
 
