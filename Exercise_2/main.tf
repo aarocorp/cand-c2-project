@@ -1,3 +1,7 @@
+# Use of tfvars files
+# For the exercise I used a tfvars where my access_key and secret_key where initialized.
+# Thoses files were not pushed in the repo ... So to test the code you should give those inputs variables (see root > tfvars > access.tfvars for template)
+
 # Resources
 # https://www.terraform.io/docs/providers/aws/r/lambda_function.html
 # https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime

@@ -1,6 +1,6 @@
 # Use of tfvars files
 # For the exercise I used a tfvars where my access_key and secret_key where initialized.
-# Thoses files were not pushed in the repo ... So to test the code you should give those inputs variables (see tfvars > access.tfvars for template)
+# Thoses files were not pushed in the repo ... So to test the code you should give those inputs variables (see root > tfvars > access.tfvars for template)
 
 # The tag Name with "N" capital letter to make sure that the given name is displayed in AWS EC2 list
 # With the "n" it was not doing so ...
